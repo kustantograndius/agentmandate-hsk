@@ -1,0 +1,47 @@
+=== MAINNET DEMO ATTEMPT 1 21:23:24 ===
+principal=0x2DfA330D38450b7755e38475aEE5426465E5b832 agent=0xff4A720D0AD91700fa6E3560ECebCab141A9776d seller=0xDa56D12A9717407148043b2dFD994CB3D058A9d3
+principal HSK: 13518839166315836536
+DemoToken(MockUSDC)=0x61850A5112e11Fb9a1442f6F3f1a1246e95bD9F0 Registry=0x7a1A0421d87f5429Fc1b9cC7a55598fE717AD7E5 Settlement=0xed36006100B45040154333f464Ed55Bc7F2e942c
+minted 1000 demo tokens to principal
+funded agent + seller with 0.3 HSK gas each
+seller registered the service in the mainnet registry
+[seller] chain=177 rpc=https://mainnet.hsk.xyz settlement=0xed36006100B45040154333f464Ed55Bc7F2e942c token=0x61850A5112e11Fb9a1442f6F3f1a1246e95bD9F0 payTo=0xDa56D12A9717407148043b2dFD994CB3D058A9d3 price=10000
+[buyer] chain=177 agent=0xff4A720D0AD91700fa6E3560ECebCab141A9776d principal=0x2DfA330D38450b7755e38475aEE5426465E5b832 settlement=0xed36006100B45040154333f464Ed55Bc7F2e942c
+[buyer] registry service #1: (0xDa56D12A9717407148043b2dFD994CB3D058A9d3, "HSK Wallet Report", "http://127.0.0.1:18777/x402/hsk-wallet-report", 0x61850A5112e11Fb9a1442f6F3f1a1246e95bD9F0, 10000 [1e4], true) ...
+[seller] "GET /x402/hsk-wallet-report?address=0xff4A720D0AD91700fa6E3560ECebCab141A9776d HTTP/1.1" 402 -
+[buyer] 402 challenge: pay 10000 atomic of 0x61850A5112e11Fb9a1442f6F3f1a1246e95bD9F0 to 0xDa56D12A9717407148043b2dFD994CB3D058A9d3, taskRef=0x402a3b95d15f131c47247e31ca8f09124a2d59ff1a81edf12cbc7f8077884828
+[buyer] mandate #1 created by principal (perTxCap=10000, totalCap=100000, expiry=1795620253) tx=0x936474eb3f71ee8dc213b7bbe30dbe5d4311ecf1d9deeebc99380ec75bedfab1
+[buyer] principal approved settlement to pull up to 100000
+[buyer] agent signed PaymentAuthorization (nonce=0x9776033aafb24c3d..., deadline=1795617281)
+[buyer] settled on-chain: receipt #1 tx=0x825822188a921f57666f2fa2925592d2364701cd534bdbfdeb30e63381d5c1bf
+[buyer] explorer: https://hashkey.blockscout.com/tx/0x825822188a921f57666f2fa2925592d2364701cd534bdbfdeb30e63381d5c1bf
+[buyer] receipt verified on-chain: payer=0x2dfa330d38450b7755e38475aee5426465e5b832 amount=10000 settledAt=1795616693
+[seller] "GET /x402/hsk-wallet-report?address=0xff4A720D0AD91700fa6E3560ECebCab141A9776d HTTP/1.1" 200 -
+[buyer] deliverable received (HTTP 200):
+{
+  "address": "0xff4A720D0AD91700fa6E3560ECebCab141A9776d",
+  "chainId": 177,
+  "nativeBalanceWei": "155415478915550097",
+  "nativeBalance": 0.1554154789155501,
+  "token": {
+    "address": "0x61850A5112e11Fb9a1442f6F3f1a1246e95bD9F0",
+    "balanceAtomic": "0",
+    "balance": 0.0,
+    "decimals": 6
+  },
+  "txCount": 1,
+  "paidVia": {
+    "scheme": "agent-mandate",
+    "receiptId": 1,
+    "mandateId": 1,
+    "payer": "0x2dfa330d38450b7755e38475aee5426465e5b832",
+    "payee": "0xda56d12a9717407148043b2dfd994cb3d058a9d3",
+    "amount": "10000",
+    "taskRef": "0x402a3b95d15f131c47247e31ca8f09124a2d59ff1a81edf12cbc7f8077884828",
+    "settledAt": 1795616693,
+    "settlementContract": "0xed36006100B45040154333f464Ed55Bc7F2e942c",
+    "explorer": "https://hashkey.blockscout.com/address/0xed36006100B45040154333f464Ed55Bc7F2e942c"
+  }
+}
+seller demo-token balance after demo: 10000 [1e4] (expect 10000)
+MAINNET DEMO DONE — DemoToken=0x61850A5112e11Fb9a1442f6F3f1a1246e95bD9F0 Registry=0x7a1A0421d87f5429Fc1b9cC7a55598fE717AD7E5 Settlement=0xed36006100B45040154333f464Ed55Bc7F2e942c

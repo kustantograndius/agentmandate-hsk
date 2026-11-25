@@ -1,0 +1,54 @@
+========================================================================
+AgentMandate E2E — local anvil + MockUSDC + x402-HSK seller/buyer
+========================================================================
+[1] forge build: OK
+[1] forge test: 12 passed; 0 failed (all suites)
+[2] anvil up (chainId 31337): principal=0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 agent=0x70997970C51812dc3A010C7d01b50e0d17dc79C8 seller=0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc
+[3] deployed: MockUSDC=0x5FbDB2315678afecb367f032d93F642f64180aa3 (tx 0x2bfc3358fc68838c38d96da30d46979b9d60e003d6185b5884115fe6d6d738a6)
+    Registry=0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512 (tx 0x59ce572f028e95c0822b8817e2e91ab66d6f9212353857a24790eaea6d0b406c)
+    Settlement=0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0 (tx 0x23c0dad7437bfbd371cd878117c457b72974f9903f0963990d0a9c787ec8f156)
+[4] minted 1000 mUSDC to principal; balance=1000000000
+[4] seller registered service #1 at price 10000 (tx 0x52c8395b7b15dc1f542bd109af2f16b96d7767f68f0c2091d1b081f287b51407)
+[5] seller x402 server up
+[6] buyer agent output:
+    [buyer] chain=31337 agent=0x70997970C51812dc3A010C7d01b50e0d17dc79C8 principal=0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 settlement=0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0
+    [buyer] registry service #1: (0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC, "HSK Wallet Report", "http://127.0.0.1:18777/x402/hsk-wallet-report", 0x5FbDB2315678afecb367f032d93F642f64180aa3, 10000 [1e4], true) ...
+    [buyer] 402 challenge: pay 10000 atomic of 0x5FbDB2315678afecb367f032d93F642f64180aa3 to 0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc, taskRef=0x78be67a3bb9cb0397f133086dc1a321a405fac93cac099e460f81a190c412b5c
+    [buyer] mandate #1 created by principal (perTxCap=10000, totalCap=100000, expiry=1795299181) tx=0x4554a80541e2a0f4c4d0e943f0c1051ced1540990ef3f42c668d169f74bb4d36
+    [buyer] principal approved settlement to pull up to 100000
+    [buyer] agent signed PaymentAuthorization (nonce=0xc085536cf8953cc0..., deadline=1795296181)
+    [buyer] settled on-chain: receipt #1 tx=0x57db7ce1a342a59ce3a75465d9e6abac4ff99ac3c5c74afacd39f3b5b86d9606
+    [buyer] receipt verified on-chain: payer=0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266 amount=10000 settledAt=1795295587
+    [buyer] deliverable received (HTTP 200):
+    {
+      "address": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "chainId": 31337,
+      "nativeBalanceWei": "9999999883841087504208",
+      "nativeBalance": 9999.999883841087,
+      "token": {
+        "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "balanceAtomic": "0",
+        "balance": 0.0,
+        "decimals": 6
+      },
+      "txCount": 1,
+      "paidVia": {
+        "scheme": "agent-mandate",
+        "receiptId": 1,
+        "mandateId": 1,
+        "payer": "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266",
+        "payee": "0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc",
+        "amount": "10000",
+        "taskRef": "0x78be67a3bb9cb0397f133086dc1a321a405fac93cac099e460f81a190c412b5c",
+        "settledAt": 1795295587,
+        "settlementContract": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0"
+      }
+    }
+[7] seller mUSDC balance = 10000 (expect 10000)
+    receipt #1: {"mandateId": 1, "payer": "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266", "payee": "0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc", "token": "0x5fbdb2315678afecb367f032d93f642f64180aa3", "amount": 10000, "taskRef": "0x78be67a3bb9cb0397f133086dc1a321a405fac93cac099e460f81a190c412b5c", "settledAt": 1795295587}
+    mandate #1 spent = 10000 (expect 10000)
+    replay of receipt #1 -> HTTP 402 (expect 402)
+    bogus receipt #999 -> HTTP 402 (expect 402)
+    unpaid request -> HTTP 402 (expect 402)
+
+E2E RESULT: PASS — mandate created, EIP-712 authorization signed, settlement on-chain, receipt verified, deliverable served, replay/bogus/unpaid all rejected.

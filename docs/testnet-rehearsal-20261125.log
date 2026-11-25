@@ -1,0 +1,346 @@
+DEPLOYER 0x3B053631FF8a4A5Ff66f3e0553267e753d263b30 tHSK balance: 100000000000000000
+AGENT 0xD34C0771A39aF1d212F55d2794Aa57C186456845 tHSK balance: 100000000000000000
+Error: MPP HTTP request to https://testnet.hsk.xyz/ failed: HTTP request failed: error sending request: error sending request: operation timed out
+=== ATTEMPT 1 19:56:41 ===
+Error: MPP HTTP request to https://testnet.hsk.xyz/ failed: HTTP request failed: error sending request: error sending request: operation timed out
+=== ATTEMPT 2 19:57:31 ===
+DEPLOYER 0x3B053631FF8a4A5Ff66f3e0553267e753d263b30 tHSK balance: 100000000000000000
+AGENT 0xD34C0771A39aF1d212F55d2794Aa57C186456845 tHSK balance: 100000000000000000
+SELLER 0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475 tHSK balance: 100000000000000000
+Error: MPP HTTP request to https://testnet.hsk.xyz/ failed: HTTP request failed: error sending request: error sending request: client error (SendRequest): connection error: peer closed connection without sending TLS close_notify: https://docs.rs/rustls/latest/rustls/manual/_03_howto/index.html#unexpected-eof
+=== ATTEMPT 3 19:58:43 ===
+DEPLOYER 0x3B053631FF8a4A5Ff66f3e0553267e753d263b30 tHSK balance: 100000000000000000
+AGENT 0xD34C0771A39aF1d212F55d2794Aa57C186456845 tHSK balance: 100000000000000000
+SELLER 0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475 tHSK balance: 100000000000000000
+MockUSDC=0x3c624A1b16e71abdD4569D05D5eB62f99Ea4E490 Registry=0x9E17AA24cF83b096C38ADFb7Dc05Ff6fADEEF264 Settlement=0xe34Ac15F7530250AD2cACda18fE79ba4F229bd0A
+Explorer: https://testnet-explorer.hskchain.net/address/0xe34Ac15F7530250AD2cACda18fE79ba4F229bd0A
+minted 1000 mUSDC (testnet stand-in) to principal
+seller registered the service
+Traceback (most recent call last):
+  File "/home/hatch/workspace/hsk-hackathon/repo/server/seller.py", line 42, in <module>
+    from lib import evm  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^
+  File "/home/hatch/workspace/hsk-hackathon/repo/server/../lib/evm.py", line 17, in <module>
+    from Crypto.Hash import keccak
+ModuleNotFoundError: No module named 'Crypto'
+Traceback (most recent call last):
+  File "/home/hatch/workspace/hsk-hackathon/repo/agent/buyer.py", line 35, in <module>
+    from lib import evm  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^
+  File "/home/hatch/workspace/hsk-hackathon/repo/agent/../lib/evm.py", line 17, in <module>
+    from Crypto.Hash import keccak
+ModuleNotFoundError: No module named 'Crypto'
+=== VENV ATTEMPT 1 20:00:23 ===
+DEPLOYER 0x3B053631FF8a4A5Ff66f3e0553267e753d263b30 tHSK balance: 98018908661528689
+AGENT 0xD34C0771A39aF1d212F55d2794Aa57C186456845 tHSK balance: 100000000000000000
+SELLER 0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475 tHSK balance: 99789874076165643
+MockUSDC=0x0544f4d9da1d0125F1961d667D6B7A85Fe9bC618 Registry=0x1e5280913c941C9D13405C53B2cc094750C756cA Settlement=0x356934Fc09520BCCeD2245be968d8f03A5984372
+Explorer: https://testnet-explorer.hskchain.net/address/0x356934Fc09520BCCeD2245be968d8f03A5984372
+minted 1000 mUSDC (testnet stand-in) to principal
+seller registered the service
+[seller] chain=133 rpc=https://testnet.hsk.xyz settlement=0x356934Fc09520BCCeD2245be968d8f03A5984372 token=0x0544f4d9da1d0125F1961d667D6B7A85Fe9bC618 payTo=0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475 price=10000
+[buyer] chain=133 agent=0xD34C0771A39aF1d212F55d2794Aa57C186456845 principal=0x3B053631FF8a4A5Ff66f3e0553267e753d263b30 settlement=0x356934Fc09520BCCeD2245be968d8f03A5984372
+[buyer] registry service #1: (0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475, "HSK Wallet Report", "http://127.0.0.1:18777/x402/hsk-wallet-report", 0x0544f4d9da1d0125F1961d667D6B7A85Fe9bC618, 10000 [1e4], true) ...
+[seller] "GET /x402/hsk-wallet-report?address=0xD34C0771A39aF1d212F55d2794Aa57C186456845 HTTP/1.1" 402 -
+[buyer] 402 challenge: pay 10000 atomic of 0x0544f4d9da1d0125F1961d667D6B7A85Fe9bC618 to 0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475, taskRef=0xc2a61fa66ec3bee090817c1a7894dc32306d2367f59df0a6f3f44ff1efce69e9
+[buyer] mandate #1 created by principal (perTxCap=10000, totalCap=100000, expiry=1795615297) tx=0xf9dfa5c6a6a1919053b88d8f20e33b2ce33e942de67e987aa1efd75def6b45f5
+[buyer] principal approved settlement to pull up to 100000
+[buyer] agent signed PaymentAuthorization (nonce=0x24ba249de2ab3368..., deadline=1795612310)
+[buyer] settled on-chain: receipt #1 tx=0x5c4e34701f581f71397f29a5cba7e3643c94a34c07cb438d02cba976fc5ef148
+[buyer] explorer: https://testnet-explorer.hskchain.net/tx/0x5c4e34701f581f71397f29a5cba7e3643c94a34c07cb438d02cba976fc5ef148
+[buyer] receipt verified on-chain: payer=0x3b053631ff8a4a5ff66f3e0553267e753d263b30 amount=10000 settledAt=1795611716
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 32902)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/hatch/workspace/hsk-hackathon/repo/server/seller.py", line 195, in do_GET
+    report = wallet_report(address)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hatch/workspace/hsk-hackathon/repo/server/seller.py", line 120, in wallet_report
+    "chainId": evm.chain_id(RPC_URL),
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hatch/workspace/hsk-hackathon/repo/server/../lib/evm.py", line 67, in chain_id
+    return int(rpc(rpc_url, "eth_chainId", []), 16)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hatch/workspace/hsk-hackathon/repo/server/../lib/evm.py", line 59, in rpc
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 515, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 532, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 1392, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 1348, in do_open
+    r = h.getresponse()
+        ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 1457, in getresponse
+    response.begin()
+  File "/usr/lib/python3.12/http/client.py", line 336, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 305, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+----------------------------------------
+Traceback (most recent call last):
+  File "/home/hatch/workspace/hsk-hackathon/repo/agent/buyer.py", line 184, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/hatch/workspace/hsk-hackathon/repo/agent/buyer.py", line 175, in main
+    status, report = http_get(url, {"X-Payment-Receipt": str(receipt_id)})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hatch/workspace/hsk-hackathon/repo/agent/buyer.py", line 58, in http_get
+    with urllib.request.urlopen(req, timeout=30) as r:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 515, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 532, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 1373, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 1348, in do_open
+    r = h.getresponse()
+        ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 1457, in getresponse
+    response.begin()
+  File "/usr/lib/python3.12/http/client.py", line 336, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 305, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+=== VENV ATTEMPT 2 20:02:07 ===
+DEPLOYER 0x3B053631FF8a4A5Ff66f3e0553267e753d263b30 tHSK balance: 95824230872574039
+AGENT 0xD34C0771A39aF1d212F55d2794Aa57C186456845 tHSK balance: 99710604878257960
+SELLER 0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475 tHSK balance: 99579748150578490
+MockUSDC=0x1DC9Ef3DE06f6630aDE62c1192CE3b41083FBe17 Registry=0xB9318512e31dF78Cc4443669f2d758347A66880F Settlement=0x8c7C0Bd6233B7Cc029Ca3Cf761db9E6E6D1f58Ba
+Explorer: https://testnet-explorer.hskchain.net/address/0x8c7C0Bd6233B7Cc029Ca3Cf761db9E6E6D1f58Ba
+minted 1000 mUSDC (testnet stand-in) to principal
+seller registered the service
+[seller] chain=133 rpc=https://testnet.hsk.xyz settlement=0x8c7C0Bd6233B7Cc029Ca3Cf761db9E6E6D1f58Ba token=0x1DC9Ef3DE06f6630aDE62c1192CE3b41083FBe17 payTo=0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475 price=10000
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/http/client.py", line 584, in _get_chunk_left
+    chunk_left = self._read_next_chunk_size()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 551, in _read_next_chunk_size
+    return int(line, 16)
+           ^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 16: b''
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/http/client.py", line 600, in _read_chunked
+    while (chunk_left := self._get_chunk_left()) is not None:
+                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 586, in _get_chunk_left
+    raise IncompleteRead(b'')
+http.client.IncompleteRead: IncompleteRead(0 bytes read)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/hatch/workspace/hsk-hackathon/repo/agent/buyer.py", line 184, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/hatch/workspace/hsk-hackathon/repo/agent/buyer.py", line 93, in main
+    cid = evm.chain_id(rpc_url)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hatch/workspace/hsk-hackathon/repo/agent/../lib/evm.py", line 67, in chain_id
+    return int(rpc(rpc_url, "eth_chainId", []), 16)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hatch/workspace/hsk-hackathon/repo/agent/../lib/evm.py", line 60, in rpc
+    out = json.loads(r.read())
+                     ^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 478, in read
+    return self._read_chunked(amt)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 612, in _read_chunked
+    raise IncompleteRead(b''.join(value)) from exc
+http.client.IncompleteRead: IncompleteRead(40 bytes read)
+=== VENV ATTEMPT 3 20:02:52 ===
+DEPLOYER 0x3B053631FF8a4A5Ff66f3e0553267e753d263b30 tHSK balance: 93843139382356814
+AGENT 0xD34C0771A39aF1d212F55d2794Aa57C186456845 tHSK balance: 99710604878257960
+SELLER 0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475 tHSK balance: 99369622222307979
+MockUSDC=0x3128670E543cc8948010FC82D9D6436358427854 Registry=0x904C425CD5b43922bc68259E93901BB45F56486D Settlement=0xb9822075b02047a05F13DBd0eEAbd3a7d144FB30
+Explorer: https://testnet-explorer.hskchain.net/address/0xb9822075b02047a05F13DBd0eEAbd3a7d144FB30
+minted 1000 mUSDC (testnet stand-in) to principal
+seller registered the service
+[seller] chain=133 rpc=https://testnet.hsk.xyz settlement=0xb9822075b02047a05F13DBd0eEAbd3a7d144FB30 token=0x3128670E543cc8948010FC82D9D6436358427854 payTo=0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475 price=10000
+[buyer] chain=133 agent=0xD34C0771A39aF1d212F55d2794Aa57C186456845 principal=0x3B053631FF8a4A5Ff66f3e0553267e753d263b30 settlement=0xb9822075b02047a05F13DBd0eEAbd3a7d144FB30
+[buyer] registry service #1: (0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475, "HSK Wallet Report", "http://127.0.0.1:18777/x402/hsk-wallet-report", 0x3128670E543cc8948010FC82D9D6436358427854, 10000 [1e4], true) ...
+[seller] "GET /x402/hsk-wallet-report?address=0xD34C0771A39aF1d212F55d2794Aa57C186456845 HTTP/1.1" 402 -
+[buyer] 402 challenge: pay 10000 atomic of 0x3128670E543cc8948010FC82D9D6436358427854 to 0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475, taskRef=0xc2a61fa66ec3bee090817c1a7894dc32306d2367f59df0a6f3f44ff1efce69e9
+[buyer] mandate #1 created by principal (perTxCap=10000, totalCap=100000, expiry=1795615412) tx=0xc2acaec01468c7f18bbce434cf2f10266604044582110840f45196f86e5e7937
+[buyer] principal approved settlement to pull up to 100000
+[buyer] agent signed PaymentAuthorization (nonce=0x915773f4e287cc4f..., deadline=1795612427)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/http/client.py", line 606, in _read_chunked
+    value.append(self._safe_read(chunk_left))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 650, in _safe_read
+    raise IncompleteRead(data, amt - len(data))
+http.client.IncompleteRead: IncompleteRead(559 bytes read, 2067 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/hatch/workspace/hsk-hackathon/repo/agent/buyer.py", line 184, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/hatch/workspace/hsk-hackathon/repo/agent/buyer.py", line 160, in main
+    receipt = evm.send_tx(rpc_url, agent_pk, settlement,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hatch/workspace/hsk-hackathon/repo/agent/../lib/evm.py", line 149, in send_tx
+    return wait_receipt(rpc_url, tx_hash)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hatch/workspace/hsk-hackathon/repo/agent/../lib/evm.py", line 155, in wait_receipt
+    receipt = rpc(rpc_url, "eth_getTransactionReceipt", [tx_hash])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hatch/workspace/hsk-hackathon/repo/agent/../lib/evm.py", line 60, in rpc
+    out = json.loads(r.read())
+                     ^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 478, in read
+    return self._read_chunked(amt)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 612, in _read_chunked
+    raise IncompleteRead(b''.join(value)) from exc
+http.client.IncompleteRead: IncompleteRead(0 bytes read)
+=== RETRYRPC ATTEMPT 1 20:04:31 ===
+DEPLOYER 0x3B053631FF8a4A5Ff66f3e0553267e753d263b30 tHSK balance: 91648461474346343
+AGENT 0xD34C0771A39aF1d212F55d2794Aa57C186456845 tHSK balance: 99421189734247734
+SELLER 0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475 tHSK balance: 99159496294836125
+MockUSDC=0x74Ce16096Cf92aDC2FaF0F16D51680E5C089426B Registry=0x88201a6c19e456A5f8003d7f9D3F39D1eec5Bf08 Settlement=0x8B58ececC4074c55dBA2cD55Cc0C0840dc1309d7
+Explorer: https://testnet-explorer.hskchain.net/address/0x8B58ececC4074c55dBA2cD55Cc0C0840dc1309d7
+minted 1000 mUSDC (testnet stand-in) to principal
+seller registered the service
+[seller] chain=133 rpc=https://testnet.hsk.xyz settlement=0x8B58ececC4074c55dBA2cD55Cc0C0840dc1309d7 token=0x74Ce16096Cf92aDC2FaF0F16D51680E5C089426B payTo=0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475 price=10000
+[buyer] chain=133 agent=0xD34C0771A39aF1d212F55d2794Aa57C186456845 principal=0x3B053631FF8a4A5Ff66f3e0553267e753d263b30 settlement=0x8B58ececC4074c55dBA2cD55Cc0C0840dc1309d7
+[buyer] registry service #1: (0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475, "HSK Wallet Report", "http://127.0.0.1:18777/x402/hsk-wallet-report", 0x74Ce16096Cf92aDC2FaF0F16D51680E5C089426B, 10000 [1e4], true) ...
+[seller] "GET /x402/hsk-wallet-report?address=0xD34C0771A39aF1d212F55d2794Aa57C186456845 HTTP/1.1" 402 -
+[buyer] 402 challenge: pay 10000 atomic of 0x74Ce16096Cf92aDC2FaF0F16D51680E5C089426B to 0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475, taskRef=0xc2a61fa66ec3bee090817c1a7894dc32306d2367f59df0a6f3f44ff1efce69e9
+[buyer] mandate #1 created by principal (perTxCap=10000, totalCap=100000, expiry=1795615515) tx=0x095733a5fd9cf74ca340cde4d5a935c762980d24bc2abb571ab0668e555da9bc
+[buyer] principal approved settlement to pull up to 100000
+[buyer] agent signed PaymentAuthorization (nonce=0x89b96f9deb41b08e..., deadline=1795612533)
+[buyer] settled on-chain: receipt #1 tx=0x5ca898af1376b31e561987a254a5d9776b68a8ed3f84522ddcf25dd53c394599
+[buyer] explorer: https://testnet-explorer.hskchain.net/tx/0x5ca898af1376b31e561987a254a5d9776b68a8ed3f84522ddcf25dd53c394599
+[buyer] receipt verified on-chain: payer=0x3b053631ff8a4a5ff66f3e0553267e753d263b30 amount=10000 settledAt=1795611940
+[seller] "GET /x402/hsk-wallet-report?address=0xD34C0771A39aF1d212F55d2794Aa57C186456845 HTTP/1.1" 402 -
+redemption failed: HTTP 402: {'x402Version': 1, 'error': 'payment required', 'accepts': [{'scheme': 'agent-mandate', 'network': 'eip155:133', 'asset': '0x74Ce16096Cf92aDC2FaF0F16D51680E5C089426B', 'payTo': '0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475', 'amount': '10000', 'settlementContract': '0x8B58ececC4074c55dBA2cD55Cc0C0840dc1309d7', 'taskRef': '0xc2a61fa66ec3bee090817c1a7894dc32306d2367f59df0a6f3f44ff1efce69e9', 'resource': '/x402/hsk-wallet-report?address=0xD34C0771A39aF1d212F55d2794Aa57C186456845', 'description': 'HSK wallet snapshot report: live native + USDC balances and transaction count for any address, settled through an AgentMandate payment mandate (HSP shape: x402 challenge -> EIP-712 authorization -> on-chain settlement -> auditable receipt). Method: GET, query ?address=0x... Pay via A2ASettlement.settle under a mandate naming you payee, then retry with header X-Payment-Receipt: <receiptId>.', 'mimeType': 'application/json'}]}
+=== RETRYRPC ATTEMPT 2 20:05:52 ===
+DEPLOYER 0x3B053631FF8a4A5Ff66f3e0553267e753d263b30 tHSK balance: 89453783441926470
+AGENT 0xD34C0771A39aF1d212F55d2794Aa57C186456845 tHSK balance: 99131774585623293
+SELLER 0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475 tHSK balance: 98949370362037805
+MockUSDC=0x999CcAd229665b2719A4BD82B184c91c0d53448D Registry=0xA4591cDD0803C337125f4229ac17F9Dc5f39f852 Settlement=0x1d492dd27A12f3fDb2fde069C9fBC5E2Cc67f7DF
+Explorer: https://testnet-explorer.hskchain.net/address/0x1d492dd27A12f3fDb2fde069C9fBC5E2Cc67f7DF
+minted 1000 mUSDC (testnet stand-in) to principal
+seller registered the service
+[seller] chain=133 rpc=https://testnet.hsk.xyz settlement=0x1d492dd27A12f3fDb2fde069C9fBC5E2Cc67f7DF token=0x999CcAd229665b2719A4BD82B184c91c0d53448D payTo=0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475 price=10000
+[buyer] chain=133 agent=0xD34C0771A39aF1d212F55d2794Aa57C186456845 principal=0x3B053631FF8a4A5Ff66f3e0553267e753d263b30 settlement=0x1d492dd27A12f3fDb2fde069C9fBC5E2Cc67f7DF
+[buyer] registry service #1: (0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475, "HSK Wallet Report", "http://127.0.0.1:18777/x402/hsk-wallet-report", 0x999CcAd229665b2719A4BD82B184c91c0d53448D, 10000 [1e4], true) ...
+[seller] "GET /x402/hsk-wallet-report?address=0xD34C0771A39aF1d212F55d2794Aa57C186456845 HTTP/1.1" 402 -
+[buyer] 402 challenge: pay 10000 atomic of 0x999CcAd229665b2719A4BD82B184c91c0d53448D to 0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475, taskRef=0xc2a61fa66ec3bee090817c1a7894dc32306d2367f59df0a6f3f44ff1efce69e9
+[buyer] mandate #1 created by principal (perTxCap=10000, totalCap=100000, expiry=1795615608) tx=0xd8f7d6cebf07d4b97222107ade041e6439239498b47546f1f273612c3fd0cd0a
+[buyer] principal approved settlement to pull up to 100000
+[buyer] agent signed PaymentAuthorization (nonce=0x4bc6e0bc53709e62..., deadline=1795612625)
+[buyer] settled on-chain: receipt #1 tx=0xbacd8fe4f25d167af4f608763015d292b3fb65425f280cf261cdc05d55730120
+[buyer] explorer: https://testnet-explorer.hskchain.net/tx/0xbacd8fe4f25d167af4f608763015d292b3fb65425f280cf261cdc05d55730120
+[buyer] receipt verified on-chain: payer=0x3b053631ff8a4a5ff66f3e0553267e753d263b30 amount=10000 settledAt=1795612032
+[seller] "GET /x402/hsk-wallet-report?address=0xD34C0771A39aF1d212F55d2794Aa57C186456845 HTTP/1.1" 402 -
+redemption failed: HTTP 402: {'x402Version': 1, 'error': 'payment required', 'accepts': [{'scheme': 'agent-mandate', 'network': 'eip155:133', 'asset': '0x999CcAd229665b2719A4BD82B184c91c0d53448D', 'payTo': '0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475', 'amount': '10000', 'settlementContract': '0x1d492dd27A12f3fDb2fde069C9fBC5E2Cc67f7DF', 'taskRef': '0xc2a61fa66ec3bee090817c1a7894dc32306d2367f59df0a6f3f44ff1efce69e9', 'resource': '/x402/hsk-wallet-report?address=0xD34C0771A39aF1d212F55d2794Aa57C186456845', 'description': 'HSK wallet snapshot report: live native + USDC balances and transaction count for any address, settled through an AgentMandate payment mandate (HSP shape: x402 challenge -> EIP-712 authorization -> on-chain settlement -> auditable receipt). Method: GET, query ?address=0x... Pay via A2ASettlement.settle under a mandate naming you payee, then retry with header X-Payment-Receipt: <receiptId>.', 'mimeType': 'application/json'}]}
+=== RETRYRPC ATTEMPT 3 20:07:21 ===
+DEPLOYER 0x3B053631FF8a4A5Ff66f3e0553267e753d263b30 tHSK balance: 87259105361336411
+AGENT 0xD34C0771A39aF1d212F55d2794Aa57C186456845 tHSK balance: 98842359429223238
+SELLER 0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475 tHSK balance: 98739244427867283
+MockUSDC=0x8E1de2fa8DD4B3DE9f3fbe6d151E0845cB5B9FE7 Registry=0x25B8438F18FB9ab26ECEef376e4557371E4Dc67B Settlement=0x9F5f74F945b4de1C0CaBCb42849711271E663626
+Explorer: https://testnet-explorer.hskchain.net/address/0x9F5f74F945b4de1C0CaBCb42849711271E663626
+minted 1000 mUSDC (testnet stand-in) to principal
+seller registered the service
+[seller] chain=133 rpc=https://testnet.hsk.xyz settlement=0x9F5f74F945b4de1C0CaBCb42849711271E663626 token=0x8E1de2fa8DD4B3DE9f3fbe6d151E0845cB5B9FE7 payTo=0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475 price=10000
+[buyer] chain=133 agent=0xD34C0771A39aF1d212F55d2794Aa57C186456845 principal=0x3B053631FF8a4A5Ff66f3e0553267e753d263b30 settlement=0x9F5f74F945b4de1C0CaBCb42849711271E663626
+[buyer] registry service #1: (0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475, "HSK Wallet Report", "http://127.0.0.1:18777/x402/hsk-wallet-report", 0x8E1de2fa8DD4B3DE9f3fbe6d151E0845cB5B9FE7, 10000 [1e4], true) ...
+[seller] "GET /x402/hsk-wallet-report?address=0xD34C0771A39aF1d212F55d2794Aa57C186456845 HTTP/1.1" 402 -
+[buyer] 402 challenge: pay 10000 atomic of 0x8E1de2fa8DD4B3DE9f3fbe6d151E0845cB5B9FE7 to 0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475, taskRef=0xc2a61fa66ec3bee090817c1a7894dc32306d2367f59df0a6f3f44ff1efce69e9
+[buyer] mandate #1 created by principal (perTxCap=10000, totalCap=100000, expiry=1795615685) tx=0x63e1c62c227373cf8fa23fc5f7f0a996868ffaf5dc365fe2f87bbe727ff43f69
+[buyer] principal approved settlement to pull up to 100000
+[buyer] agent signed PaymentAuthorization (nonce=0x2d200c17f8e4cb67..., deadline=1795612701)
+[buyer] settled on-chain: receipt #1 tx=0x53f3f6de27c8461e67b106e3a06ef8b3a58335c726f2396543870efaf46ec161
+[buyer] explorer: https://testnet-explorer.hskchain.net/tx/0x53f3f6de27c8461e67b106e3a06ef8b3a58335c726f2396543870efaf46ec161
+[buyer] receipt verified on-chain: payer=0x3b053631ff8a4a5ff66f3e0553267e753d263b30 amount=10000 settledAt=1795612108
+[seller] "GET /x402/hsk-wallet-report?address=0xD34C0771A39aF1d212F55d2794Aa57C186456845 HTTP/1.1" 402 -
+redemption failed: HTTP 402: {'x402Version': 1, 'error': 'payment required', 'accepts': [{'scheme': 'agent-mandate', 'network': 'eip155:133', 'asset': '0x8E1de2fa8DD4B3DE9f3fbe6d151E0845cB5B9FE7', 'payTo': '0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475', 'amount': '10000', 'settlementContract': '0x9F5f74F945b4de1C0CaBCb42849711271E663626', 'taskRef': '0xc2a61fa66ec3bee090817c1a7894dc32306d2367f59df0a6f3f44ff1efce69e9', 'resource': '/x402/hsk-wallet-report?address=0xD34C0771A39aF1d212F55d2794Aa57C186456845', 'description': 'HSK wallet snapshot report: live native + USDC balances and transaction count for any address, settled through an AgentMandate payment mandate (HSP shape: x402 challenge -> EIP-712 authorization -> on-chain settlement -> auditable receipt). Method: GET, query ?address=0x... Pay via A2ASettlement.settle under a mandate naming you payee, then retry with header X-Payment-Receipt: <receiptId>.', 'mimeType': 'application/json'}]}
+=== FIXED ATTEMPT 1 20:09:41 ===
+DEPLOYER 0x3B053631FF8a4A5Ff66f3e0553267e753d263b30 tHSK balance: 85064427129080037
+AGENT 0xD34C0771A39aF1d212F55d2794Aa57C186456845 tHSK balance: 98552944267119103
+SELLER 0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475 tHSK balance: 98529118488993902
+MockUSDC=0xeCe86fC8d9e4E0e71249d1731c03753A4BBcA40C Registry=0xD5509D1dEdeD78641C2420d28F37AEB18d99DdCD Settlement=0x2019fEE6078ad66af87eD3D4ac0cFbEd78F3A061
+Explorer: https://testnet-explorer.hskchain.net/address/0x2019fEE6078ad66af87eD3D4ac0cFbEd78F3A061
+minted 1000 mUSDC (testnet stand-in) to principal
+seller registered the service
+[buyer] chain=133 agent=0xD34C0771A39aF1d212F55d2794Aa57C186456845 principal=0x3B053631FF8a4A5Ff66f3e0553267e753d263b30 settlement=0x2019fEE6078ad66af87eD3D4ac0cFbEd78F3A061
+[seller] chain=133 rpc=https://testnet.hsk.xyz settlement=0x2019fEE6078ad66af87eD3D4ac0cFbEd78F3A061 token=0xeCe86fC8d9e4E0e71249d1731c03753A4BBcA40C payTo=0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475 price=10000
+[buyer] registry service #1: (0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475, "HSK Wallet Report", "http://127.0.0.1:18777/x402/hsk-wallet-report", 0xeCe86fC8d9e4E0e71249d1731c03753A4BBcA40C, 10000 [1e4], true) ...
+[seller] "GET /x402/hsk-wallet-report?address=0xD34C0771A39aF1d212F55d2794Aa57C186456845 HTTP/1.1" 402 -
+[buyer] 402 challenge: pay 10000 atomic of 0xeCe86fC8d9e4E0e71249d1731c03753A4BBcA40C to 0xB4aFCF13910B4d000E4BCcEAEfbB7d278D865475, taskRef=0xc2a61fa66ec3bee090817c1a7894dc32306d2367f59df0a6f3f44ff1efce69e9
+[buyer] mandate #1 created by principal (perTxCap=10000, totalCap=100000, expiry=1795615825) tx=0xaa7bb802c422c7f23e197e2cfcda974674a9d2ebd8eba722d26f47baf1d59a96
+[buyer] principal approved settlement to pull up to 100000
+[buyer] agent signed PaymentAuthorization (nonce=0x5437dd02efa774b0..., deadline=1795612842)
+[buyer] settled on-chain: receipt #1 tx=0x64dcdba2011ddccfa09ffe5f9f4518cde302a9450f4ac30e0d15eb6f6593da37
+[buyer] explorer: https://testnet-explorer.hskchain.net/tx/0x64dcdba2011ddccfa09ffe5f9f4518cde302a9450f4ac30e0d15eb6f6593da37
+[buyer] receipt verified on-chain: payer=0x3b053631ff8a4a5ff66f3e0553267e753d263b30 amount=10000 settledAt=1795612248
+[seller] "GET /x402/hsk-wallet-report?address=0xD34C0771A39aF1d212F55d2794Aa57C186456845 HTTP/1.1" 200 -
+[buyer] deliverable received (HTTP 200):
+{
+  "address": "0xD34C0771A39aF1d212F55d2794Aa57C186456845",
+  "chainId": 133,
+  "nativeBalanceWei": "98263529089424191",
+  "nativeBalance": 0.09826352908942419,
+  "token": {
+    "address": "0xeCe86fC8d9e4E0e71249d1731c03753A4BBcA40C",
+    "balanceAtomic": "0",
+    "balance": 0.0,
+    "decimals": 6
+  },
+  "txCount": 6,
+  "paidVia": {
+    "scheme": "agent-mandate",
+    "receiptId": 1,
+    "mandateId": 1,
+    "payer": "0x3b053631ff8a4a5ff66f3e0553267e753d263b30",
+    "payee": "0xb4afcf13910b4d000e4bcceaefbb7d278d865475",
+    "amount": "10000",
+    "taskRef": "0xc2a61fa66ec3bee090817c1a7894dc32306d2367f59df0a6f3f44ff1efce69e9",
+    "settledAt": 1795612248,
+    "settlementContract": "0x2019fEE6078ad66af87eD3D4ac0cFbEd78F3A061"
+  }
+}
+seller mUSDC balance after rehearsal: 10000 [1e4] (expect 10000)
+REHEARSAL DONE — addresses: MockUSDC=0xeCe86fC8d9e4E0e71249d1731c03753A4BBcA40C Registry=0xD5509D1dEdeD78641C2420d28F37AEB18d99DdCD Settlement=0x2019fEE6078ad66af87eD3D4ac0cFbEd78F3A061

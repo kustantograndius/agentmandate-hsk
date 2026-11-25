@@ -1,0 +1,7 @@
+[seller] chain=31337 rpc=http://127.0.0.1:8546 settlement=0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0 token=0x5FbDB2315678afecb367f032d93F642f64180aa3 payTo=0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc price=10000
+[seller] "GET / HTTP/1.1" 200 -
+[seller] "GET /x402/hsk-wallet-report?address=0x70997970C51812dc3A010C7d01b50e0d17dc79C8 HTTP/1.1" 402 -
+[seller] "GET /x402/hsk-wallet-report?address=0x70997970C51812dc3A010C7d01b50e0d17dc79C8 HTTP/1.1" 200 -
+[seller] "GET /x402/hsk-wallet-report?address=0x70997970C51812dc3A010C7d01b50e0d17dc79C8 HTTP/1.1" 402 -
+[seller] "GET /x402/hsk-wallet-report?address=0x70997970C51812dc3A010C7d01b50e0d17dc79C8 HTTP/1.1" 402 -
+[seller] "GET /x402/hsk-wallet-report?address=0x70997970C51812dc3A010C7d01b50e0d17dc79C8 HTTP/1.1" 402 -
